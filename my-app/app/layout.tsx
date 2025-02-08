@@ -17,11 +17,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Ask Your Valentine – Create a Cute Invite 💖",
     description: "Generate a personalized invite link to ask your Valentine out in a fun and creative way!",
-    url: "https://tenor.com/brQ0ty17TBw.gif/",
+    url: "/preview.jpg", // Update this with the actual URL
     siteName: "Ask Your Valentine",
     images: [
       {
-        url: "https://tenor.com/brQ0ty17TBw.gif", // Change this to a relevant image URL
+        url: "/preview.jpg", // Change this to a relevant image URL
         width: 1200,
         height: 630,
         alt: "Ask Your Valentine - Generate a Cute Invite",
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     site: "@invalid.dev", // Replace with your Twitter handle if available
     title: "Ask Your Valentine – Generate a Cute Invite 💖",
     description: "Create a fun, romantic invite to ask your Valentine out!",
-    images: ["https://tenor.com/brQ0ty17TBw.gif"], // Update this if you have an image for preview
+    images: ['/preview.jpg'], // Update this if you have an image for preview
   },
   robots: "index, follow",
 };
