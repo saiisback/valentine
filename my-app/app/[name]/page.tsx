@@ -86,7 +86,7 @@ export default function ValentinePage() {
           </motion.div>
         )}
       </motion.div>
-      <footer className='text-gray-400 flex gap-4 items-center mt-6'>
+      <footer className='text-pink-400 flex gap-4 items-center mt-6'>
         <span>Website made with love ❤️✨ for you</span>
       </footer>
     </div>
