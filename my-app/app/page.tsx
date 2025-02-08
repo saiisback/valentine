@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { ClipboardIcon, CheckIcon } from '@heroicons/react/24/solid';
 import { Github, Instagram, Linkedin } from 'lucide-react';
+import { HeartIcon, SparklesIcon } from '@heroicons/react/24/solid';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -28,6 +29,13 @@ export default function Home() {
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.6 }}
       >
+        <motion.div
+          initial={{ opacity: 0, scale: 0.5 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.7, delay: 0.3 }}
+        >
+          <HeartIcon className="w-16 h-16 text-white mx-auto drop-shadow-lg" />
+        </motion.div>
         <motion.h1
           className="text-4xl font-extrabold drop-shadow-lg"
           initial={{ opacity: 0, y: -20 }}

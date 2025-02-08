@@ -1,8 +1,36 @@
+import { Metadata } from 'next';
+
+export async function generateMetadata({ params }: { params: { name: string } }): Promise<Metadata> {
+  return {
+    title: `Will you be my Valentine, ${params.name}? 💖`,
+    description: `Hey ${params.name}, someone has a special Valentine's message for you! Click to see your surprise. ❤️`,
+    openGraph: {
+      title: `Will you be my Valentine, ${params.name}? 💖`,
+      description: `Hey ${params.name}, someone has a special Valentine's message for you! Click to see your surprise. ❤️`,
+      images: [
+        {
+          url: '/valentine-preview.png', // Upload this image inside `public/`
+          width: 1200,
+          height: 630,
+          alt: 'A romantic surprise for your Valentine!',
+        },
+      ],
+      type: 'website',
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: `Will you be my Valentine, ${params.name}? 💖`,
+      description: `Hey ${params.name}, someone has a special Valentine's message for you! Click to see your surprise. ❤️`,
+      images: ['/valentine-preview.png'],
+    },
+  };
+}
+
 'use client';
 
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { HeartIcon, SparklesIcon } from '@heroicons/react/24/solid';
+import { HeartIcon } from '@heroicons/react/24/solid';
 import { useParams } from 'next/navigation';
 
 export default function ValentinePage() {
