@@ -13,7 +13,7 @@ export default function Home() {
   const [copied, setCopied] = useState(false);
   const baseURL = 'https://ask-ur-valentine.vercel.app/';
 
-  const generatedLink = name ? `${baseURL}${encodeURIComponent(name)}` : '';
+  const generatedLink = name ? `${baseURL}${encodeURIComponent(name.trim().replace(/\s+/g, '-'))}` : '';
 
   const copyToClipboard = () => {
     navigator.clipboard.writeText(generatedLink);

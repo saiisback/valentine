@@ -8,9 +8,12 @@ import { useParams } from 'next/navigation';
 export default function ValentinePage() {
   const [accepted, setAccepted] = useState(false);
   const [begging, setBegging] = useState(false);
-  const { name } = useParams();
   const [noButtonPosition, setNoButtonPosition] = useState({ top: 0, left: 0 });
 
+
+const { name } = useParams();
+
+const formattedName = typeof name === 'string' ? decodeURIComponent(name.replace(/-/g, ' ')) : '';
   const moveNoButton = () => {
     setBegging(true);
     setNoButtonPosition({
@@ -45,7 +48,7 @@ export default function ValentinePage() {
         </motion.div>
 
         <h1 className="text-5xl font-extrabold mt-6 drop-shadow-lg">
-          {accepted ? `Thank you, ${name}!` : begging ? "Please be my Valentine? 🥺" : `Will you be my Valentine, ${name}? 💖`}
+          {accepted ? `Thank you, ${formattedName}!` : begging ? "Please be my Valentine? 🥺" : `Will you be my Valentine, ${formattedName}? 💖`}
         </h1>
 
         {!accepted ? (
